@@ -240,7 +240,7 @@ function QanadeelSharab() {
 
           <div className="about-image reveal">
             <img
-              src="/img/c3.jpg"
+              src="/img/about.jfif"
               alt="قناديل شرعب"
               loading="lazy"
             />
@@ -290,7 +290,7 @@ function QanadeelSharab() {
           </div>
 
           <h2 className="section-title">
-            من حملوا نور القرآن
+            من حملوا نور العلم
           </h2>
 
           <p className="section-description">
@@ -476,12 +476,8 @@ function QanadeelSharab() {
             <i className="fa-solid fa-location-dot" />
             البطنة — بني سميع
           </div>
-
-          <p>
-            أستاذ أجيال وحارس أمين على التعليم،
-            عُرف بالنزاهة والأمانة والمسؤولية.
-            أسس مدرسة التصحيح في سوق ربوع بني شعب،
-            وترك أثرًا عميقًا في أجيال من أبناء شرعب.
+<p>
+     فقيهٌ نشأ على حب العلم، وقطع في الثانية عشرة من عمره الفيافي سيرًا إلى مدينة زبيد طلبًا للعلم، فعاد حافظًا لكتاب الله، وفقيهًا في المواريث والفرائض، وحاملًا لعلم الحديث، ثم جعل من معلامته ومنبر مسجد البطنة منارتين للتعليم والإرشاد وخدمة المجتم
           </p>
 
           <a
