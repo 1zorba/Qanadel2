@@ -1,0 +1,1535 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+:root {
+  --green: #082d24;
+  --green-2: #0d4033;
+  --green-3: #145847;
+  --gold: #c9a45c;
+  --gold-light: #e5c985;
+  --cream: #f7f3ea;
+  --white: #ffffff;
+  --text: #1b2925;
+  --muted: #73807a;
+  --border: rgba(201, 164, 92, 0.25);
+  --shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.qanadeel-page {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: "Cairo", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.qanadeel-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.qanadeel-page button,
+.qanadeel-page input {
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.qanadeel-page .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 82px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  background: rgba(8, 45, 36, 0.78);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    height 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.qanadeel-page .navbar.scrolled {
+  height: 70px;
+  background: rgba(8, 45, 36, 0.96);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.qanadeel-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--white);
+}
+
+.qanadeel-page .brand-logo {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.qanadeel-page .brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: contain;
+}
+
+.qanadeel-page .brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.qanadeel-page .brand-text {
+  font-family: "Amiri", serif;
+  font-size: 27px;
+  line-height: 1.1;
+  color: var(--gold-light);
+}
+
+.qanadeel-page .brand-info small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.qanadeel-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+}
+
+.qanadeel-page .nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.qanadeel-page .nav-links a:hover {
+  color: var(--gold-light);
+}
+
+.qanadeel-page .nav-links a::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--gold);
+
+  transition: width 0.3s ease;
+}
+
+.qanadeel-page .nav-links a:hover::after {
+  width: 100%;
+}
+
+.qanadeel-page .nav-search {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--white);
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.qanadeel-page .nav-search:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: scale(1.05);
+}
+
+.qanadeel-page .menu-btn {
+  display: none;
+
+  border: 0;
+  background: transparent;
+  color: var(--white);
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.qanadeel-page .hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 24, 19, 0.82),
+      rgba(4, 24, 19, 0.38)
+    ),
+    url("/img/images.jfif");
+
+  background-size: cover;
+  background-position: center;
+
+  color: var(--white);
+}
+
+.qanadeel-page .hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+
+  pointer-events: none;
+}
+
+.qanadeel-page .hero-pattern {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.06;
+
+  background-image:
+    linear-gradient(
+      30deg,
+      #fff 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #fff 87.5%,
+      #fff
+    ),
+    linear-gradient(
+      150deg,
+      #fff 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #fff 87.5%,
+      #fff
+    );
+
+  background-size: 80px 140px;
+
+  pointer-events: none;
+}
+
+.qanadeel-page .hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 90%);
+
+  margin: auto;
+  padding-top: 80px;
+
+  text-align: center;
+}
+
+.qanadeel-page .hero-kicker {
+  margin-bottom: 20px;
+
+  color: var(--gold-light);
+
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.qanadeel-page .hero h1 {
+  margin: 0 0 20px;
+
+  font-family: "Amiri", serif;
+  font-size: clamp(65px, 9vw, 125px);
+  font-weight: 400;
+  line-height: 0.9;
+
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.qanadeel-page .hero-line {
+  width: 100px;
+  height: 1px;
+
+  margin: 25px auto;
+
+  background: var(--gold);
+}
+
+.qanadeel-page .hero-subtitle {
+  margin-bottom: 15px;
+
+  color: #f2ead8;
+
+  font-family: "Amiri", serif;
+  font-size: clamp(20px, 3vw, 30px);
+}
+
+.qanadeel-page .hero-description {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 2;
+}
+
+.qanadeel-page .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.qanadeel-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 50px;
+
+  padding: 14px 28px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.qanadeel-page .btn-gold {
+  border: 1px solid var(--gold);
+
+  background: var(--gold);
+  color: var(--green);
+
+  font-weight: 700;
+}
+
+.qanadeel-page .btn-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(201, 164, 92, 0.25);
+}
+
+.qanadeel-page .btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: transparent;
+  color: var(--white);
+}
+
+.qanadeel-page .btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+
+  transform: translateY(-3px);
+}
+
+.qanadeel-page .scroll-down {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+
+  z-index: 3;
+
+  transform: translateX(-50%);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.qanadeel-page .scroll-down i {
+  display: block;
+  margin-top: 7px;
+
+  animation: qanadeelBounce 1.5s infinite;
+}
+
+@keyframes qanadeelBounce {
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* =========================
+   STATS
+========================= */
+
+.qanadeel-page .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 45px 8%;
+
+  background: var(--green);
+}
+
+.qanadeel-page .stat {
+  padding: 0 20px;
+
+  text-align: center;
+
+  color: var(--white);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.qanadeel-page .stat:last-child {
+  border-left: 0;
+}
+
+.qanadeel-page .stat strong {
+  display: block;
+
+  color: var(--gold);
+
+  font-family: "Amiri", serif;
+  font-size: 42px;
+}
+
+.qanadeel-page .stat span {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.qanadeel-page .section {
+  padding: 110px 8%;
+}
+
+.qanadeel-page .section-header {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.qanadeel-page .section-kicker {
+  margin-bottom: 10px;
+
+  color: var(--gold);
+
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.qanadeel-page .section-title {
+  margin: 0;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.qanadeel-page .section-description {
+  margin: 10px 0 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.qanadeel-page .about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.qanadeel-page .about-image {
+  position: relative;
+  height: 500px;
+}
+
+.qanadeel-page .about-image img {
+  width: 88%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 4px;
+}
+
+.qanadeel-page .about-image::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: -25px;
+
+  width: 65%;
+  height: 65%;
+
+  z-index: -1;
+
+  border: 1px solid var(--gold);
+}
+
+.qanadeel-page .about-content h2 {
+  margin: 0 0 20px;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.qanadeel-page .about-content p {
+  margin: 0 0 18px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 2.3;
+}
+
+.qanadeel-page .quote {
+  padding: 15px 20px;
+
+  border-right: 3px solid var(--gold);
+
+  background: rgba(201, 164, 92, 0.06);
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 22px;
+}
+
+/* =========================
+   CANDLES
+========================= */
+
+.qanadeel-page .candles {
+  background: var(--white);
+}
+
+.qanadeel-page .candle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.qanadeel-page .candle-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid #eee;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.qanadeel-page .candle-card:hover {
+  transform: translateY(-8px);
+
+  border-color: var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+.qanadeel-page .candle-image {
+  position: relative;
+
+  height: 330px;
+
+  overflow: hidden;
+}
+
+.qanadeel-page .candle-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.qanadeel-page .candle-card:hover .candle-image img {
+  transform: scale(1.05);
+}
+
+.qanadeel-page .candle-year {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  padding: 6px 12px;
+
+  background: var(--green);
+  color: var(--gold-light);
+
+  font-size: 11px;
+}
+
+.qanadeel-page .candle-info {
+  padding: 25px;
+}
+
+.qanadeel-page .candle-info h3 {
+  margin: 0 0 5px;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.qanadeel-page .candle-location {
+  margin-bottom: 15px;
+
+  color: var(--gold);
+
+  font-size: 12px;
+}
+
+.qanadeel-page .candle-location i {
+  margin-left: 5px;
+}
+
+.qanadeel-page .candle-info p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 2;
+}
+
+.qanadeel-page .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+
+  color: var(--green);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.qanadeel-page .read-more:hover {
+  gap: 12px;
+  color: var(--gold);
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.qanadeel-page .search-section {
+  background: var(--green);
+  color: var(--white);
+
+  text-align: center;
+}
+
+.qanadeel-page .search-section .section-title {
+  color: var(--white);
+}
+
+.qanadeel-page .search-description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.qanadeel-page .search-box {
+  display: flex;
+
+  max-width: 700px;
+
+  margin: 30px auto 0;
+  padding: 5px;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border-radius: 5px;
+}
+
+.qanadeel-page .search-box input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 15px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  direction: rtl;
+}
+
+.qanadeel-page .search-box button {
+  width: 55px;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: var(--gold);
+  color: var(--green);
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.qanadeel-page .search-box button:hover {
+  background: var(--gold-light);
+}
+
+/* =========================
+   MAP
+========================= */
+
+.qanadeel-page .map-section {
+  background: #f0ece3;
+}
+
+.qanadeel-page .map-wrapper {
+  position: relative;
+
+  max-width: 1000px;
+  height: 500px;
+
+  margin: auto;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(201, 164, 92, 0.1),
+      transparent 55%
+    ),
+    #e6e1d6;
+}
+
+.qanadeel-page .map-lines {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.25;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      #998c72 49%,
+      transparent 50%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      #998c72 49%,
+      transparent 50%
+    );
+
+  background-size: 80px 80px;
+}
+
+.qanadeel-page .map-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: rgba(8, 45, 36, 0.12);
+
+  font-family: "Amiri", serif;
+  font-size: 60px;
+}
+
+.qanadeel-page .map-pin {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid var(--gold);
+  border-radius: 50% 50% 50% 0;
+
+  background: var(--green);
+
+  color: var(--gold-light);
+
+  cursor: pointer;
+
+  transform: rotate(-45deg);
+
+  transition: transform 0.3s ease;
+}
+
+.qanadeel-page .map-pin i {
+  transform: rotate(45deg);
+}
+
+.qanadeel-page .map-pin:hover {
+  transform: rotate(-45deg) scale(1.15);
+}
+
+.qanadeel-page .pin-1 {
+  top: 25%;
+  left: 30%;
+}
+
+.qanadeel-page .pin-2 {
+  top: 50%;
+  left: 60%;
+}
+
+.qanadeel-page .pin-3 {
+  top: 65%;
+  left: 38%;
+}
+
+.qanadeel-page .pin-4 {
+  top: 35%;
+  left: 75%;
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.qanadeel-page .featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 520px;
+
+  background: var(--green);
+  color: var(--white);
+}
+
+.qanadeel-page .featured-image {
+  min-height: 500px;
+}
+
+.qanadeel-page .featured-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter: sepia(20%);
+}
+
+.qanadeel-page .featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px;
+}
+
+.qanadeel-page .featured-content .section-kicker {
+  color: var(--gold-light);
+}
+
+.qanadeel-page .featured-content h2 {
+  margin: 0 0 5px;
+
+  font-family: "Amiri", serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.qanadeel-page .featured-content .location {
+  margin-bottom: 20px;
+
+  color: var(--gold);
+}
+
+.qanadeel-page .featured-content .location i {
+  margin-left: 5px;
+}
+
+.qanadeel-page .featured-content p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  line-height: 2.2;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.qanadeel-page .timeline {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.qanadeel-page .timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  right: 50%;
+
+  width: 1px;
+
+  background: var(--border);
+}
+
+.qanadeel-page .timeline-item {
+  position: relative;
+
+  width: 50%;
+
+  padding: 20px 50px;
+}
+
+.qanadeel-page .timeline-item:nth-child(odd) {
+  margin-right: auto;
+}
+
+.qanadeel-page .timeline-dot {
+  position: absolute;
+  top: 28px;
+
+  width: 13px;
+  height: 13px;
+
+  border: 4px solid var(--cream);
+  border-radius: 50%;
+
+  background: var(--gold);
+}
+
+.qanadeel-page .timeline-item:nth-child(even) .timeline-dot {
+  left: -6px;
+}
+
+.qanadeel-page .timeline-item:nth-child(odd) .timeline-dot {
+  right: -6px;
+}
+
+.qanadeel-page .timeline-year {
+  color: var(--gold);
+
+  font-family: "Amiri", serif;
+  font-size: 28px;
+}
+
+.qanadeel-page .timeline-item h3 {
+  margin: 0;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.qanadeel-page .timeline-item p {
+  margin: 8px 0 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* =========================
+   ARCHIVE
+========================= */
+
+.qanadeel-page .archive {
+  background: var(--white);
+}
+
+.qanadeel-page .archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.qanadeel-page .archive-card {
+  padding: 35px 25px;
+
+  border: 1px solid #eee;
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.qanadeel-page .archive-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--gold);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.qanadeel-page .archive-icon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  font-size: 22px;
+}
+
+.qanadeel-page .archive-card h3 {
+  margin: 0 0 7px;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.qanadeel-page .archive-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.qanadeel-page .testimonials {
+  background: var(--cream);
+}
+
+.qanadeel-page .testimonial {
+  max-width: 800px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.qanadeel-page .quote-icon {
+  margin-bottom: 20px;
+
+  color: var(--gold);
+
+  font-size: 40px;
+}
+
+.qanadeel-page .testimonial p {
+  margin: 0;
+
+  color: var(--green);
+
+  font-family: "Amiri", serif;
+  font-size: 28px;
+  line-height: 2;
+}
+
+.qanadeel-page .testimonial-author {
+  margin-top: 25px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+/* =========================
+   CONTRIBUTION
+========================= */
+
+.qanadeel-page .contribute {
+  padding: 100px 20px;
+
+  background: var(--green);
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.qanadeel-page .contribute h2 {
+  margin: 0;
+
+  font-family: "Amiri", serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.qanadeel-page .contribute p {
+  max-width: 650px;
+
+  margin: 15px auto 30px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  line-height: 2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.qanadeel-page footer {
+  padding: 70px 8% 30px;
+
+  background: #041b15;
+
+  color: var(--white);
+}
+
+.qanadeel-page .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.qanadeel-page .footer-brand {
+  color: var(--gold);
+
+  font-family: "Amiri", serif;
+  font-size: 35px;
+}
+
+.qanadeel-page .footer-description {
+  max-width: 400px;
+
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 13px;
+  line-height: 2;
+}
+
+.qanadeel-page footer h4 {
+  margin: 0 0 20px;
+
+  color: var(--gold-light);
+}
+
+.qanadeel-page footer ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.qanadeel-page footer li {
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+
+  transition: color 0.3s ease;
+}
+
+.qanadeel-page footer li:hover {
+  color: var(--gold);
+}
+
+.qanadeel-page footer li i {
+  margin-left: 5px;
+}
+
+.qanadeel-page .copyright {
+  margin-top: 50px;
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.qanadeel-page .reveal {
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.qanadeel-page .reveal.active {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .qanadeel-page .nav-links {
+    display: none;
+  }
+
+  .qanadeel-page .menu-btn {
+    display: block;
+  }
+
+  .qanadeel-page .navbar {
+    padding: 0 5%;
+  }
+
+  .qanadeel-page .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .qanadeel-page .stat {
+    border: 0;
+  }
+
+  .qanadeel-page .about,
+  .qanadeel-page .featured {
+    grid-template-columns: 1fr;
+  }
+
+  .qanadeel-page .about-image {
+    height: 400px;
+  }
+
+  .qanadeel-page .candle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qanadeel-page .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qanadeel-page .featured-content {
+    padding: 60px 30px;
+  }
+
+  .qanadeel-page .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .qanadeel-page .brand-text {
+    font-size: 23px;
+  }
+
+  .qanadeel-page .brand-logo {
+    width: 43px;
+    height: 43px;
+  }
+
+  .qanadeel-page .brand-info small {
+    display: none;
+  }
+
+  .qanadeel-page .hero {
+    min-height: 100svh;
+
+    background-position: center;
+  }
+
+  .qanadeel-page .hero-content {
+    width: 92%;
+    padding-top: 70px;
+  }
+
+  .qanadeel-page .hero-kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .qanadeel-page .hero h1 {
+    font-size: 65px;
+  }
+
+  .qanadeel-page .hero-subtitle {
+    font-size: 21px;
+  }
+
+  .qanadeel-page .hero-description {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .qanadeel-page .hero-actions {
+    flex-direction: column;
+
+    width: min(300px, 100%);
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .qanadeel-page .stats {
+    grid-template-columns: 1fr 1fr;
+    padding: 35px 5%;
+  }
+
+  .qanadeel-page .stat strong {
+    font-size: 34px;
+  }
+
+  .qanadeel-page .stat span {
+    font-size: 11px;
+  }
+
+  .qanadeel-page .section {
+    padding: 80px 5%;
+  }
+
+  .qanadeel-page .section-header {
+    margin-bottom: 40px;
+  }
+
+  .qanadeel-page .section-title {
+    font-size: 40px;
+  }
+
+  .qanadeel-page .about-image {
+    height: 350px;
+  }
+
+  .qanadeel-page .about-content h2 {
+    font-size: 42px;
+  }
+
+  .qanadeel-page .candle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qanadeel-page .candle-image {
+    height: 320px;
+  }
+
+  .qanadeel-page .archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qanadeel-page .timeline::before {
+    right: 10px;
+  }
+
+  .qanadeel-page .timeline-item,
+  .qanadeel-page .timeline-item:nth-child(odd) {
+    width: 100%;
+
+    margin: 0;
+
+    padding-right: 40px;
+    padding-left: 0;
+  }
+
+  .qanadeel-page .timeline-item .timeline-dot,
+  .qanadeel-page .timeline-item:nth-child(even) .timeline-dot,
+  .qanadeel-page .timeline-item:nth-child(odd) .timeline-dot {
+    right: 4px;
+    left: auto;
+  }
+
+  .qanadeel-page .map-wrapper {
+    height: 400px;
+  }
+
+  .qanadeel-page .map-pin {
+    width: 40px;
+    height: 40px;
+  }
+
+  .qanadeel-page .map-label {
+    font-size: 45px;
+  }
+
+  .qanadeel-page .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qanadeel-page .featured-content h2 {
+    font-size: 42px;
+  }
+
+  .qanadeel-page .contribute h2 {
+    font-size: 40px;
+  }
+
+  .qanadeel-page .testimonial p {
+    font-size: 23px;
+  }
+
+  .qanadeel-page .search-box {
+    width: 100%;
+  }
+}

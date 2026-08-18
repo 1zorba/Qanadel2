@@ -1,0 +1,970 @@
+.hassan-page {
+  --green: #082d24;
+  --green-light: #104c3d;
+  --green-dark: #041b15;
+
+  --gold: #c9a45c;
+  --gold-light: #e6ce9b;
+
+  --cream: #f7f3ea;
+  --white: #ffffff;
+
+  --text: #26332e;
+  --muted: #748079;
+
+  --border: rgba(201, 164, 92, .28);
+
+  --shadow: 0 20px 60px rgba(8, 45, 36, .10);
+
+  min-height: 100vh;
+
+  background: var(--cream);
+
+  color: var(--text);
+
+  font-family: "Cairo", sans-serif;
+
+  overflow-x: hidden;
+}
+
+.hassan-page * {
+  box-sizing: border-box;
+}
+
+.hassan-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.hassan-navbar {
+  height: 78px;
+
+  background: var(--green);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  color: white;
+}
+
+.hassan-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hassan-brand-icon {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--gold);
+
+  font-size: 17px;
+}
+
+.hassan-brand-text {
+  font-family: "Amiri", serif;
+
+  font-size: 27px;
+
+  color: var(--gold-light);
+}
+
+.hassan-brand small {
+  display: block;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,.45);
+
+  margin-top: -5px;
+}
+
+.hassan-back {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,.7);
+
+  transition: .3s;
+}
+
+.hassan-back:hover {
+  color: var(--gold-light);
+
+  transform: translateX(4px);
+}
+
+
+/* ================= HERO ================= */
+
+.hassan-profile-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(201,164,92,.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(201,164,92,.07),
+      transparent 30%
+    ),
+    var(--green);
+
+  color: white;
+
+  padding: 90px 7% 100px;
+}
+
+.hassan-profile-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border: 1px solid rgba(201,164,92,.10);
+
+  border-radius: 50%;
+
+  left: -300px;
+  top: -300px;
+}
+
+.hassan-profile-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border: 1px solid rgba(201,164,92,.08);
+
+  border-radius: 50%;
+
+  right: -170px;
+  bottom: -170px;
+}
+
+.hassan-profile-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 410px 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.hassan-profile-image {
+  height: 500px;
+
+  position: relative;
+
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(201,164,92,.25);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.hassan-profile-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  opacity: .85;
+}
+
+.hassan-image-overlay {
+  position: absolute;
+
+  inset: 15px;
+
+  border: 1px solid rgba(201,164,92,.45);
+
+  pointer-events: none;
+}
+
+.hassan-profile-kicker {
+  color: var(--gold);
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.hassan-profile-title {
+  font-family: "Amiri", serif;
+
+  font-weight: 400;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  line-height: 1.15;
+
+  color: white;
+}
+
+.hassan-profile-location {
+  margin-top: 18px;
+
+  color: var(--gold-light);
+
+  font-size: 14px;
+}
+
+.hassan-profile-location i {
+  margin-left: 5px;
+
+  color: var(--gold);
+}
+
+.hassan-profile-years {
+  display: inline-flex;
+
+  margin-top: 25px;
+
+  padding: 8px 18px;
+
+  border: 1px solid rgba(201,164,92,.35);
+
+  color: rgba(255,255,255,.75);
+
+  font-family: "Amiri", serif;
+
+  font-size: 18px;
+}
+
+.hassan-profile-intro {
+  max-width: 700px;
+
+  margin-top: 28px;
+
+  color: rgba(255,255,255,.68);
+
+  line-height: 2.4;
+
+  font-size: 15px;
+}
+
+.hassan-hero-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.hassan-hero-tag {
+  padding: 7px 13px;
+
+  border: 1px solid rgba(201,164,92,.25);
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 11px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.hassan-content {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 100px 7%;
+}
+
+.hassan-section {
+  margin-bottom: 100px;
+}
+
+.hassan-section-heading {
+  margin-bottom: 35px;
+}
+
+.hassan-section-kicker {
+  color: var(--gold);
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 7px;
+}
+
+.hassan-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: "Amiri", serif;
+
+  font-weight: 400;
+
+  font-size: 43px;
+
+  color: var(--green);
+}
+
+.hassan-section-title i {
+  color: var(--gold);
+
+  font-size: 22px;
+}
+
+
+/* ================= INFO ================= */
+
+.hassan-info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.hassan-info-card {
+  background: white;
+
+  padding: 27px;
+
+  border: 1px solid #eee;
+
+  transition: .35s;
+}
+
+.hassan-info-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+.hassan-info-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--border);
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--gold);
+
+  margin-bottom: 17px;
+}
+
+.hassan-info-card span {
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+}
+
+.hassan-info-card strong {
+  color: var(--green);
+
+  font-size: 15px;
+}
+
+
+/* ================= STORY ================= */
+
+.hassan-story {
+  background: white;
+
+  padding: 45px;
+
+  border-right: 4px solid var(--gold);
+
+  box-shadow: var(--shadow);
+}
+
+.hassan-story p {
+  color: var(--muted);
+
+  line-height: 2.5;
+
+  font-size: 15px;
+
+  text-align: justify;
+
+  margin-bottom: 18px;
+}
+
+.hassan-story p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ================= KNOWLEDGE ================= */
+
+.hassan-knowledge-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.hassan-knowledge-card {
+  background: white;
+
+  padding: 28px 20px;
+
+  text-align: center;
+
+  border: 1px solid #eee;
+
+  transition: .3s;
+}
+
+.hassan-knowledge-card:hover {
+  border-color: var(--gold);
+
+  transform: translateY(-4px);
+}
+
+.hassan-knowledge-card > i {
+  font-size: 24px;
+
+  color: var(--gold);
+
+  margin-bottom: 15px;
+}
+
+.hassan-knowledge-card h3 {
+  font-family: "Amiri", serif;
+
+  font-size: 22px;
+
+  color: var(--green);
+
+  font-weight: 400;
+}
+
+.hassan-knowledge-card p {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+
+/* ================= MAALAMAT ================= */
+
+.hassan-maalamat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.hassan-maalama {
+  position: relative;
+
+  background: var(--green);
+
+  color: white;
+
+  padding: 35px;
+
+  overflow: hidden;
+}
+
+.hassan-maalama::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border: 1px solid rgba(201,164,92,.15);
+
+  border-radius: 50%;
+
+  left: -40px;
+  bottom: -50px;
+}
+
+.hassan-maalama-number {
+  color: var(--gold);
+
+  font-family: "Amiri", serif;
+
+  font-size: 19px;
+}
+
+.hassan-maalama h3 {
+  font-family: "Amiri", serif;
+
+  font-weight: 400;
+
+  font-size: 30px;
+
+  margin: 5px 0 10px;
+}
+
+.hassan-maalama-location {
+  color: var(--gold-light);
+
+  font-size: 12px;
+
+  margin-bottom: 15px;
+}
+
+.hassan-maalama p {
+  color: rgba(255,255,255,.65);
+
+  line-height: 2;
+
+  font-size: 13px;
+}
+
+
+/* ================= JOURNEY ================= */
+
+.hassan-journey {
+  position: relative;
+
+  padding-right: 35px;
+
+  border-right: 1px solid var(--border);
+}
+
+.hassan-journey-item {
+  position: relative;
+
+  padding: 0 30px 50px 0;
+}
+
+.hassan-journey-item:last-child {
+  padding-bottom: 0;
+}
+
+.hassan-journey-item::before {
+  content: "";
+
+  position: absolute;
+
+  right: -41px;
+
+  top: 5px;
+
+  width: 12px;
+  height: 12px;
+
+  background: var(--gold);
+
+  border-radius: 50%;
+
+  border: 4px solid var(--cream);
+}
+
+.hassan-journey-number {
+  color: var(--gold);
+
+  font-family: "Amiri", serif;
+
+  font-size: 20px;
+
+  margin-bottom: 3px;
+}
+
+.hassan-journey-item h3 {
+  font-family: "Amiri", serif;
+
+  font-weight: 400;
+
+  font-size: 28px;
+
+  color: var(--green);
+
+  margin-bottom: 8px;
+}
+
+.hassan-journey-item p {
+  color: var(--muted);
+
+  line-height: 2.2;
+
+  font-size: 14px;
+}
+
+
+/* ================= ROLES ================= */
+
+.hassan-roles {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.hassan-role {
+  background: white;
+
+  border: 1px solid #eee;
+
+  padding: 25px 15px;
+
+  text-align: center;
+}
+
+.hassan-role i {
+  display: block;
+
+  font-size: 24px;
+
+  color: var(--gold);
+
+  margin-bottom: 12px;
+}
+
+.hassan-role span {
+  color: var(--green);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ================= PEOPLE ================= */
+
+.hassan-people-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+}
+
+.hassan-people-box {
+  background: white;
+
+  padding: 35px;
+
+  border-top: 2px solid var(--gold);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,.04);
+}
+
+.hassan-people-box h3 {
+  font-family: "Amiri", serif;
+
+  color: var(--green);
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+
+.hassan-person {
+  padding: 13px 0;
+
+  border-bottom: 1px solid #eee;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 2;
+}
+
+.hassan-person:last-child {
+  border-bottom: none;
+}
+
+.hassan-person i {
+  color: var(--gold);
+
+  margin-left: 8px;
+}
+
+
+/* ================= QUOTE ================= */
+
+.hassan-quote {
+  position: relative;
+
+  background: var(--green);
+
+  color: white;
+
+  padding: 60px 50px;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.hassan-quote::before {
+  content: "“";
+
+  position: absolute;
+
+  font-family: Georgia;
+
+  font-size: 180px;
+
+  color: rgba(201,164,92,.08);
+
+  top: -65px;
+
+  right: 30px;
+}
+
+.hassan-quote > i {
+  color: var(--gold);
+
+  font-size: 28px;
+
+  margin-bottom: 18px;
+}
+
+.hassan-quote p {
+  position: relative;
+
+  font-family: "Amiri", serif;
+
+  font-size: 27px;
+
+  line-height: 2;
+
+  color: rgba(255,255,255,.9);
+}
+
+.hassan-quote small {
+  display: block;
+
+  color: var(--gold-light);
+
+  margin-top: 15px;
+}
+
+
+/* ================= DEATH ================= */
+
+.hassan-death {
+  font-family: "Amiri", serif !important;
+
+  font-size: 24px !important;
+
+  color: var(--green) !important;
+
+  text-align: center !important;
+
+  margin-top: 25px;
+}
+
+
+/* ================= SOURCES ================= */
+
+.hassan-sources {
+  background: white;
+
+  padding: 30px;
+
+  border: 1px solid #eee;
+}
+
+.hassan-source {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #eee;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+.hassan-source:last-child {
+  border-bottom: none;
+}
+
+.hassan-source i {
+  color: var(--gold);
+}
+
+
+/* ================= FOOTER ================= */
+
+.hassan-footer {
+  background: var(--green-dark);
+
+  text-align: center;
+
+  padding: 50px 20px;
+
+  color: white;
+}
+
+.hassan-footer strong {
+  display: block;
+
+  font-family: "Amiri", serif;
+
+  font-size: 30px;
+
+  color: var(--gold-light);
+}
+
+.hassan-footer span {
+  color: rgba(255,255,255,.4);
+
+  font-size: 11px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 1000px) {
+
+  .hassan-profile-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hassan-profile-image {
+    max-width: 420px;
+
+    margin: auto;
+  }
+
+  .hassan-info-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hassan-knowledge-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hassan-roles {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+@media(max-width: 650px) {
+
+  .hassan-navbar {
+    padding: 0 5%;
+  }
+
+  .hassan-profile-hero {
+    padding: 60px 5% 70px;
+  }
+
+  .hassan-content {
+    padding: 70px 5%;
+  }
+
+  .hassan-profile-image {
+    height: 400px;
+  }
+
+  .hassan-profile-title {
+    font-size: 48px;
+  }
+
+  .hassan-info-grid,
+  .hassan-people-grid,
+  .hassan-maalamat-grid,
+  .hassan-knowledge-grid,
+  .hassan-roles {
+    grid-template-columns: 1fr;
+  }
+
+  .hassan-story {
+    padding: 25px;
+  }
+
+  .hassan-quote {
+    padding: 45px 25px;
+  }
+
+  .hassan-quote p {
+    font-size: 22px;
+  }
+
+  .hassan-back span {
+    display: none;
+  }
+
+}
