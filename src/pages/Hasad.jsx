@@ -188,13 +188,8 @@ const Hasad = () => {
                   <div className="plant plant-5">🌱</div>
                 </div>
 
-                <div className="sensor sensor-1">
-                  <span>💧</span>
-                </div>
-
-                <div className="sensor sensor-2">
-                  <span>🌡</span>
-                </div>
+               
+ 
 
               </div>
 
@@ -229,46 +224,21 @@ const Hasad = () => {
 
               </div>
 
-              <div className="irrigation">
-                <div>
-                  <span className="irrigation-icon">💦</span>
-                  <div>
-                    <small>نظام الري</small>
-                    <strong>الوضع التلقائي</strong>
-                  </div>
-                </div>
+           
 
-                <div className="switch active">
-                  <span></span>
-                </div>
-              </div>
+            
 
             </div>
 
-            <div className="floating-card floating-water">
-              <span>💧</span>
-              <div>
-                <small>خزان المياه</small>
-                <strong>78%</strong>
-              </div>
-            </div>
+        
 
-            <div className="floating-card floating-ai">
-              <span>✦</span>
-              <div>
-                <small>الذكاء الاصطناعي</small>
-                <strong>تحليل نشط</strong>
-              </div>
-            </div>
+           
 
           </div>
 
         </div>
 
-        <div className="scroll-indicator">
-          <span></span>
-          اكتشف المنظومة
-        </div>
+ 
 
       </section>
 
@@ -384,7 +354,7 @@ const Hasad = () => {
                 </span>
 
                 <div className="problem-icon">
-                  {index % 2 === 0 ? "!" : "×"}
+                  {index % 2 === 0 ? "❗" : "❌"}
                 </div>
 
                 <h3>{problem}</h3>
@@ -567,13 +537,7 @@ const Hasad = () => {
 
                   </div>
 
-                  <div className="chart-labels">
-                    <span>00:00</span>
-                    <span>06:00</span>
-                    <span>12:00</span>
-                    <span>18:00</span>
-                    <span>الآن</span>
-                  </div>
+              
 
                 </div>
 
@@ -646,8 +610,7 @@ const Hasad = () => {
 
                   <div className="irrigation-state">
                     <strong>متوقف</strong>
-                    <span>آخر ري: 07:30</span>
-                  </div>
+                   </div>
 
                   <button>تشغيل الري يدويًا</button>
 
@@ -962,8 +925,7 @@ const Hasad = () => {
             </div>
 
             <div className="chain-line">
-              <span>01</span>
-            </div>
+             </div>
 
             <div className="chain-node">
               <span>🛒</span>
@@ -971,8 +933,7 @@ const Hasad = () => {
             </div>
 
             <div className="chain-line">
-              <span>02</span>
-            </div>
+             </div>
 
             <div className="chain-node">
               <span>🚚</span>
@@ -980,8 +941,7 @@ const Hasad = () => {
             </div>
 
             <div className="chain-line">
-              <span>03</span>
-            </div>
+             </div>
 
             <div className="chain-node">
               <span>📦</span>

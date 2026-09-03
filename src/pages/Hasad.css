@@ -36,7 +36,7 @@ body {
 
   --gray-900: #172019;
   --gray-700: #536058;
-  --gray-500: #829087;
+  --gray-500: #010503;
   --gray-300: #dbe2dc;
   --gray-200: #e9eee9;
 
@@ -69,6 +69,8 @@ body {
 .hasad-page a {
   text-decoration: none;
   color: inherit;
+      color: inherit;
+    font-size: 18px;
 }
 
 .hasad-container {
@@ -125,7 +127,7 @@ body {
 .brand span {
   display: block;
   margin-top: 2px;
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 3px;
   opacity: 0.55;
   direction: ltr;
@@ -224,11 +226,12 @@ body {
   gap: 9px;
   padding: 8px 14px;
   margin-bottom: 25px;
+
   border-radius: 50px;
   border: 1px solid rgba(255,255,255,.13);
   background: rgba(255,255,255,.06);
   color: rgba(255,255,255,.75);
-  font-size: 11px;
+  font-size: 18px;
 }
 
 .pulse-dot {
@@ -341,8 +344,8 @@ body {
 }
 
 .hero-mini-stats span {
-  color: rgba(255,255,255,.4);
-  font-size: 9px;
+  color: rgb(255, 255, 255);
+  font-size: 11px;
 }
 
 /* HERO VISUAL */
@@ -392,12 +395,13 @@ body {
 
 .farm-header span {
   color: rgba(255,255,255,.45);
-  font-size: 9px;
+  font-size: 23px;
 }
 
 .farm-header strong {
-  margin-top: 2px;
-  font-size: 13px;
+    margin-top: 2px;
+    font-size: 16px;
+    padding: 11px
 }
 
 .online-status {
@@ -543,7 +547,7 @@ body {
 
 .metric small {
   color: rgba(255,255,255,.4);
-  font-size: 7px;
+  font-size: 13px;
 }
 
 .metric strong {
@@ -554,7 +558,7 @@ body {
 .metric em {
   grid-column: 2;
   color: var(--green-300);
-  font-size: 7px;
+     font-size: 18px;
   font-style: normal;
 }
 
@@ -590,7 +594,7 @@ body {
 
 .irrigation small {
   color: rgba(255,255,255,.4);
-  font-size: 7px;
+  font-size: 13px;
 }
 
 .irrigation strong {
@@ -644,32 +648,15 @@ body {
   border-radius: 10px;
   background: rgba(255,255,255,.08);
 }
-
-.floating-card small,
-.floating-card strong {
-  display: block;
-}
-
-.floating-card small {
-  color: rgba(255,255,255,.4);
-  font-size: 7px;
-}
+ 
 
 .floating-card strong {
   font-size: 11px;
 }
 
-.floating-water {
-  top: 110px;
-  right: -25px;
-  animation: floatingOne 4s ease-in-out infinite;
-}
+ 
 
-.floating-ai {
-  bottom: 105px;
-  left: -30px;
-  animation: floatingTwo 4.5s ease-in-out infinite;
-}
+ 
 
 @keyframes floatingOne {
   50% {
@@ -781,7 +768,7 @@ body {
   gap: 12px;
   margin-bottom: 22px;
   color: var(--green-600);
-  font-size: 11px;
+  font-size: 49px;
   font-weight: 800;
 }
 
@@ -804,6 +791,7 @@ body {
   line-height: 1.15;
   letter-spacing: -2px;
   font-weight: 800;
+  color: cadetblue;
 }
 
 .section-heading h2 span,
@@ -817,7 +805,8 @@ body {
   max-width: 570px;
   margin: 18px auto 0;
   color: var(--gray-500);
-  font-size: 14px;
+
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -857,9 +846,10 @@ body {
 
 .intro-grid p {
   margin: 0 0 20px;
-  color: var(--gray-700);
-  font-size: 14px;
-  line-height: 2.1;
+      margin: 0 0 20px;
+    color: #181d1a;
+    font-size: 15px;
+    line-height: 2.1;
 }
 
 .intro-grid .large-text {
@@ -894,7 +884,7 @@ body {
   display: block;
   margin-bottom: 15px;
   color: var(--gray-500);
-  font: 9px Arial;
+  font: 23px Arial;
 }
 
 .journey-item > div {
@@ -913,7 +903,7 @@ body {
 }
 
 .journey-item strong {
-  font-size: 11px;
+  font-size: 24px;
 }
 
 /* =========================================================
@@ -949,8 +939,9 @@ body {
 }
 
 .problem-number {
-  color: var(--gray-300);
-  font: 12px Arial;
+   font: 12px Arial;
+    color: #000000;
+    font: 18px Arial;
 }
 
 .problem-icon {
@@ -969,7 +960,7 @@ body {
 
 .problem-card h3 {
   margin: 45px 0 0;
-  font-size: 13px;
+  font-size: 21px;
 }
 
 .problem-line {
@@ -1021,6 +1012,7 @@ body {
 
 .solution-section .section-heading p {
   margin: 22px 0 0;
+
   color: rgba(255,255,255,.5);
 }
 
@@ -1067,7 +1059,7 @@ body {
   display: block;
   margin-top: 25px;
   color: var(--gold);
-  font: 10px Arial;
+  font: 19x Arial;
 }
 
 .solution-card h3 {
@@ -1076,10 +1068,10 @@ body {
 }
 
 .solution-card p {
-  max-width: 300px;
-  color: rgba(255,255,255,.48);
-  font-size: 12px;
-  line-height: 2;
+    max-width: 300px;
+    color: rgb(255 245 245);
+    font-size: 17px;
+    line-height: 2;
 }
 
 .card-decoration {
@@ -1108,8 +1100,8 @@ body {
 .smart-header > p {
   max-width: 390px;
   margin: 0 0 5px;
-  color: var(--gray-500);
-  font-size: 13px;
+  color: #000000;
+  font-size: 20px;
   line-height: 2;
 }
 
@@ -1135,9 +1127,9 @@ body {
 }
 
 .dashboard-top small {
-  color: var(--gray-500);
-  font-size: 9px;
-}
+    color: #061a12;
+    font-size: 13px;
+ }
 
 .dashboard-top h3 {
   margin: 2px 0 0;
@@ -1188,8 +1180,8 @@ body {
 }
 
 .chart-header small {
-  color: var(--gray-500);
-  font-size: 9px;
+     color: #000000;
+    font-size: 16px;
 }
 
 .chart-header strong {
@@ -1202,7 +1194,7 @@ body {
   border-radius: 7px;
   background: var(--gray-200);
   color: var(--gray-500);
-  font-size: 7px;
+  font-size: 13px;
 }
 
 .chart {
@@ -1284,7 +1276,8 @@ body {
   margin-bottom: 12px;
   border-radius: 10px;
   background: #f1f5f1;
-  font-size: 13px;
+  font-size: 27px;
+
 }
 
 .sensor-card small,
@@ -1295,7 +1288,7 @@ body {
 
 .sensor-card small {
   color: var(--gray-500);
-  font-size: 7px;
+  font-size: 20px;
 }
 
 .sensor-card strong {
@@ -1305,7 +1298,7 @@ body {
 
 .sensor-card em {
   color: var(--green-600);
-  font-size: 7px;
+  font-size: 16px;
   font-style: normal;
 }
 
@@ -1331,13 +1324,14 @@ body {
 }
 
 .tank-header small {
-  color: var(--gray-500);
-  font-size: 8px;
+    color: #040805;
+    font-size: 18px;
+
 }
 
 .tank-header strong {
   margin-top: 3px;
-  font-size: 11px;
+  font-size: 18px;
 }
 
 .tank-header > span {
@@ -1384,10 +1378,12 @@ body {
 }
 
 .tank-card p {
-  margin: 0;
-  color: var(--gray-500);
-  text-align: center;
-  font-size: 8px;
+  
+      margin: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .irrigation-card {
@@ -1416,11 +1412,11 @@ body {
 
 .irrigation-card-header small {
   color: var(--gray-500);
-  font-size: 7px;
+  font-size: 17px;
 }
 
 .irrigation-card-header strong {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .irrigation-state {
@@ -1445,7 +1441,7 @@ body {
   background: var(--green-800);
   color: white;
   font-family: inherit;
-  font-size: 9px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1482,27 +1478,28 @@ body {
   border-radius: 20px;
   background: var(--cream);
   box-shadow: 0 10px 30px rgba(0,0,0,.05);
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .flow-item > span {
   display: block;
   color: var(--gold);
-  font: 9px Arial;
+  font: 16px Arial;
 }
 
 .flow-item strong {
   display: block;
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 19px;
 }
 
 .flow-item p {
   margin: 7px auto 0;
   max-width: 140px;
   color: var(--gray-500);
-  font-size: 9px;
-  line-height: 1.8;
+  font-size: 13px;
+    line-height: 1.8;
+    font-weight: bold;
 }
 
 .flow-arrow {
@@ -1558,7 +1555,7 @@ body {
   max-width: 530px;
   margin: 25px 0;
   color: rgba(255,255,255,.5);
-  font-size: 13px;
+  font-size: 17px;
   line-height: 2;
 }
 
@@ -1586,14 +1583,14 @@ body {
 .ai-features p {
   margin: 0;
   color: rgba(255,255,255,.7);
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .ai-note {
-  display: block;
-  margin-top: 25px;
-  color: rgba(255,255,255,.25);
-  font-size: 8px;
+    display: block;
+    margin-top: 25px;
+    color: white;
+    font-size: 12px;
 }
 
 .ai-visual {
@@ -1720,8 +1717,8 @@ body {
 }
 
 .ai-result small {
-  color: rgba(255,255,255,.35);
-  font-size: 7px;
+color: white;
+    font-size: 10px;
 }
 
 .ai-result strong {
@@ -1786,15 +1783,15 @@ body {
 }
 
 .stakeholder-card h3 {
-  margin: 35px 0 7px;
-  font-size: 17px;
+    margin: 19px 0 13px;
+    font-size: 24px;
 }
 
 .stakeholder-card p {
   max-width: 280px;
   margin: 0;
   color: var(--gray-500);
-  font-size: 10px;
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -1824,7 +1821,7 @@ body {
   max-width: 350px;
   margin-top: 25px;
   color: var(--gray-500);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -1866,7 +1863,7 @@ body {
 }
 
 .system-item strong {
-  font-size: 10px;
+  font-size: 19px;
 }
 
 .system-arrow {
@@ -1924,7 +1921,7 @@ body {
   max-width: 430px;
   margin: 25px 0 0;
   color: rgba(255,255,255,.5);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -1947,11 +1944,11 @@ body {
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 20px;
   background: rgba(255,255,255,.07);
-  font-size: 25px;
+  font-size: 31px;
 }
 
 .chain-node strong {
-  font-size: 9px;
+  font-size: 15px;
 }
 
 .chain-line {
@@ -1961,15 +1958,7 @@ body {
   margin: 0 7px;
   background: rgba(255,255,255,.15);
 }
-
-.chain-line span {
-  position: absolute;
-  top: -17px;
-  right: 50%;
-  transform: translateX(50%);
-  color: var(--gold-light);
-  font: 8px Arial;
-}
+ 
 
 /* =========================================================
    GOALS
@@ -2014,7 +2003,7 @@ body {
   margin-top: 35px;
   border-radius: 15px;
   background: var(--cream);
-  font-size: 23px;
+  font-size: 37px;
 }
 
 .goal-card.featured > div {
@@ -2023,17 +2012,18 @@ body {
 
 .goal-card h3 {
   margin: 25px 0 8px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .goal-card p {
   color: var(--gray-500);
-  font-size: 10px;
+  font-size: 16px;
   line-height: 2;
 }
 
 .goal-card.featured p {
   color: rgba(255,255,255,.5);
+  font-size: 17px;
 }
 
 /* =========================================================
@@ -2069,7 +2059,7 @@ body {
   max-width: 550px;
   margin: 25px 0;
   color: rgba(255,255,255,.5);
-  font-size: 13px;
+  font-size: 20px;
   line-height: 2;
 }
 
@@ -2085,7 +2075,7 @@ body {
   border-radius: 50px;
   background: rgba(255,255,255,.04);
   color: rgba(255,255,255,.6);
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .future-orbit {
@@ -2131,7 +2121,8 @@ body {
 }
 
 .future-core span {
-  font-size: 30px;
+ font-size: 39px;
+    padding: 14px;
 }
 
 .future-core strong {
@@ -2139,8 +2130,8 @@ body {
 }
 
 .future-core small {
-  color: rgba(255,255,255,.4);
-  font-size: 7px;
+    color: rgb(255 255 255);
+    font-size: 13px;
 }
 
 .future-node {
@@ -2254,7 +2245,7 @@ body {
   max-width: 650px;
   margin: 20px auto;
   color: rgba(255,255,255,.45);
-  font-size: 12px;
+  font-size: 24px;
   line-height: 2;
 }
 
@@ -2266,12 +2257,13 @@ body {
 }
 
 .final-brand strong {
-  font-size: 18px;
+      font-size: 22px;
+    padding: 11px;
 }
 
 .final-brand span {
   color: var(--gold);
-  font: 8px Arial;
+  font: 16px Arial;
   letter-spacing: 5px;
 }
 
@@ -2311,25 +2303,26 @@ body {
 }
 
 .footer-brand strong {
-  font-size: 12px;
+  font-size: 26px;
 }
 
 .footer-brand span {
   margin-top: 1px;
   color: rgba(255,255,255,.3);
-  font: 6px Arial;
-  letter-spacing: 2px;
+font: 16px Arial;
+    letter-spacing: 2px;
+    padding: 19px
 }
 
 .footer-inner > p {
   margin: 0;
   color: rgba(255,255,255,.3);
-  font-size: 9px;
+  font-size: 14p;
 }
 
 .copyright {
   color: rgba(255,255,255,.25);
-  font-size: 8px;
+  font-size: 16px;
 }
 
 /* =========================================================
@@ -2484,7 +2477,7 @@ body {
   }
 
   .brand strong {
-    font-size: 14px;
+    font-size: 27px;
   }
 
   .brand-icon {
@@ -2615,6 +2608,7 @@ body {
   .market-copy h2,
   .future-content h2 {
     font-size: 48px;
+    color: cadetblue;
   }
 
   .dashboard-content {
